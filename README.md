@@ -1,8 +1,12 @@
-### Content Refactor:
+# Content Assignment
 
-- Fix backlog bugs
-- Add Redux toolkit
-- Add Unit test for presentation Component and selector
-- Add auto format code before commit with prettier
-- Add styling with sass
-- Naming class name with BEM
+## How to run source code
+
+    - Command yarn
+    - Create a file name `.env` with content `REACT_APP_WHOAMI=frontend`
+    - Command yarn start
+
+## How to write
+
+    - Will write test in folder `__tests__`
+    - Write test logic render, logic selector and model
