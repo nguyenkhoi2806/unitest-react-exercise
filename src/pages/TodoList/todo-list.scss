@@ -1,0 +1,43 @@
+@import '../../assets/common/variable.scss';
+
+.todo {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+
+    &-scroll {
+      overflow-y: scroll;
+      max-height: 500px;
+    }
+
+    @media screen and (min-width: $media-md) {
+      width: 500px;
+    }
+  }
+
+  &__loading {
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-spin {
+      border: 5px solid #f3f3f3; /* Light grey */
+      border-top: 5px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      animation: spin 2s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

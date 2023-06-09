@@ -1,0 +1,38 @@
+.todo {
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #c5e1e6;
+    margin-bottom: 1rem;
+
+    > span {
+      flex: 1 1;
+      text-align: left;
+      margin-left: 8px;
+    }
+
+    &__delete {
+      outline: none;
+      border: none;
+      width: 32px;
+      height: 32px;
+      min-width: auto;
+      min-height: auto;
+      box-shadow: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: #0a2ea4;
+      color: white;
+    }
+  }
+}
+
+.todo-item .todo-item__content {
+  flex: 1 1;
+}
