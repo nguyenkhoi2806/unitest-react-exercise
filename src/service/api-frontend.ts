@@ -20,6 +20,7 @@ class ApiFrontend {
   }
 
   async getTodoList(): Promise<Todo[]> {
+    console.log(LocalStorage.getTodoList());
     return Promise.resolve(
       LocalStorage.getTodoList().map(
         (todo) =>

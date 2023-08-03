@@ -29,15 +29,10 @@ const ToDo = () => {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      new Promise((resolve) => setTimeout(resolve, 2000))
-        .then(async () => {
-          const resp = await Service.getTodoList();
-          dispatch(setTodoList(resp || []));
-          setLoading(false);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
+      const resp = await Service.getTodoList();
+      dispatch(setTodoList(resp || []));
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      setLoading(false);
     })();
   }, [dispatch]);
 
