@@ -46,9 +46,7 @@ const ToDo = () => {
   }, [todoList]);
 
   const onCreateTodo = async (e: React.KeyboardEvent<HTMLInputElement>) => {
-    console.log(e.key);
     if (e.key === 'Enter' && inputRef.current) {
-      console.log(e.key);
       const resp = await Service.createTodo(inputRef.current.value);
       dispatch(createTodo(resp));
       inputRef.current.value = '';
